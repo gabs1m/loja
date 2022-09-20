@@ -8,21 +8,99 @@
 body{
     width:100%;
     height:100%;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 
 header, footer{
     width:100%;
     padding:10px;
-    background-color:black;
+    background-color:#2b6afc;
     color:white;
-    font-family:Arial, Helvetica, sans-serif;
+    position:relative;
 }
 footer{
     text-align:center;
     bottom:0;
+    padding:20px
 }
 
 #teste{
     height:864px;
 }
+
+/* ---- Cabeçalho ---- */
+.header-head{
+    padding:15px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-searchbar form{
+    position:relative;
+}
+.input-busca, .button-busca{
+    height:40px;
+    padding:10px;
+}
+.input-busca{
+    width:500px;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    font-size:1.1em;
+}
+.button-busca{
+    background-color:#eeee29;
+    position:absolute;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:1.2em;
+}
+.button-busca:hover{
+    background-color:#d8d817;
+}
+
+.header-icons{
+    display:flex;
+}
+.icon-header{
+    font-size:1.2em;
+    display:flex;
+    align-items:center;
+    margin:5px 20px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+.icon-header:hover{
+    color:#ccc;
+}
+.icon-header ion-icon{
+    font-size:1.5em;
+    margin:0 5px;
+}
+
+
+.navbar{
+    width:100%;
+    background-color:#1048ca;
+    display:flex;
+    padding:10px 5px;
+    justify-content:space-evenly;
+    position:sticky;
+    top:0;
+}
+.navbar a{
+    font-size:1.3em;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+.navbar a:hover{
+    color:#ccc;
+}
+/* ------------------- */
