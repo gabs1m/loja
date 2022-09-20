@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php require 'componentes/head.php'; ?>
+<head>
+    <?php require 'views/componentes/head.php'; ?>
+</head>
 <body>
     <?php
-        require 'componentes/header.php';
-        require 'componentes/navbar.php';
+        require 'views/componentes/header.php';
+        require 'views/componentes/navbar.php';
     ?>
     <section id="teste">
         
     </section>
-    <?php require 'componentes/footer.php'; ?>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <?php
+        require 'views/componentes/footer.php';
+        require 'views/componentes/js-scripts.php';
+    ?>
 </body>
 </html>
