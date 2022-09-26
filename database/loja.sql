@@ -20,7 +20,7 @@ CREATE TABLE produtos (
     PRIMARY KEY (idProduto)
 )
 
-CREATE TABLE Kits (
+CREATE TABLE kits (
     idKit INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     descrição VARCHAR(100) NOT NULL,
@@ -37,15 +37,15 @@ CREATE TABLE venda (
     idKit INT NULL,
     PRIMARY KEY (idVenda),
 
-    CONSTRAINT fk_Venda_Clientes
+    CONSTRAINT fk_venda_clientes
     FOREIGN KEY (idCliente)
     REFERENCES loja.clientes (idCliente),
 
-    CONSTRAINT fk_Venda_Produtos
+    CONSTRAINT fk_venda_produtos
     FOREIGN KEY (idProduto)
     REFERENCES loja.produtos (idCliente),
-    
-    CONSTRAINT fk_Venda_Kits
+
+    CONSTRAINT fk_venda_kits
     FOREIGN KEY (idKit)
     REFERENCES loja.kits (idKit),
 )
