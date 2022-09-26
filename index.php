@@ -5,12 +5,14 @@
 </head>
 <body>
     <?php
+        require 'database/conexao.php';
         require 'views/componentes/header.php';
         require 'views/componentes/navbar.php';
     ?>
-    <section id="teste">
-        
-    </section>
+    <?php
+        require 'logic/crud.php';
+        show();
+    ?>
     <?php
         require 'views/componentes/footer.php';
         require 'views/componentes/js-scripts.php';
