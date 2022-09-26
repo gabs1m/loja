@@ -11,13 +11,8 @@
     ?>
     <?php
         require 'logic/crud.php';
-        showAllProduto();
-        while($row){
-            
     ?>
-    
     <?php
-        }
         require 'views/componentes/footer.php';
         require 'views/componentes/js-scripts.php';
     ?>

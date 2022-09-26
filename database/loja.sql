@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS loja;
 USE loja;
 
-CREATE TABLE clientes (
+CREATE TABLE cliente (
     idCliente INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     endereco VARCHAR(100) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE clientes (
     PRIMARY KEY (idCliente)
 );
 
-CREATE TABLE produtos (
+CREATE TABLE produto (
     idProduto INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE produtos (
     PRIMARY KEY (idProduto)
 );
 
-CREATE TABLE kits (
+CREATE TABLE kit (
     idKit INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
@@ -37,15 +37,15 @@ CREATE TABLE venda (
     idKit INT NULL,
     PRIMARY KEY (idVenda),
 
-    CONSTRAINT fk_venda_clientes
+    CONSTRAINT fk_venda_cliente
     FOREIGN KEY (idCliente)
-    REFERENCES loja.clientes (idCliente),
+    REFERENCES loja.cliente (idCliente),
 
-    CONSTRAINT fk_venda_produtos
+    CONSTRAINT fk_venda_produto
     FOREIGN KEY (idProduto)
-    REFERENCES loja.produtos (idProduto),
+    REFERENCES loja.produto (idProduto),
 
-    CONSTRAINT fk_venda_kits
+    CONSTRAINT fk_venda_kit
     FOREIGN KEY (idKit)
-    REFERENCES loja.kits (idKit)
+    REFERENCES loja.kit (idKit)
 );
