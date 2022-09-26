@@ -14,7 +14,7 @@ CREATE TABLE clientes (
 CREATE TABLE produtos (
     idProduto INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    descrição VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
     valorUnit DECIMAL(9,2) NOT NULL,
     lote VARCHAR(15) NOT NULL, 
     PRIMARY KEY (idProduto)
@@ -23,7 +23,7 @@ CREATE TABLE produtos (
 CREATE TABLE kits (
     idKit INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    descrição VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
     valorKit DECIMAL(9,2) NOT NULL,
     PRIMARY KEY (idKit)
 )
