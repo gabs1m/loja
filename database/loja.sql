@@ -18,7 +18,7 @@ CREATE TABLE produtos (
     valorUnit DECIMAL(9,2) NOT NULL,
     lote VARCHAR(15) NOT NULL, 
     PRIMARY KEY (idProduto)
-)
+);
 
 CREATE TABLE kits (
     idKit INT NOT NULL AUTO_INCREMENT,
@@ -26,7 +26,7 @@ CREATE TABLE kits (
     descricao TEXT NOT NULL,
     valorKit DECIMAL(9,2) NOT NULL,
     PRIMARY KEY (idKit)
-)
+);
 
 CREATE TABLE venda (
     idVenda INT NOT NULL AUTO_INCREMENT,
@@ -48,4 +48,4 @@ CREATE TABLE venda (
     CONSTRAINT fk_venda_kits
     FOREIGN KEY (idKit)
     REFERENCES loja.kits (idKit),
-)
+);
