@@ -43,9 +43,9 @@ CREATE TABLE venda (
 
     CONSTRAINT fk_venda_produtos
     FOREIGN KEY (idProduto)
-    REFERENCES loja.produtos (idCliente),
+    REFERENCES loja.produtos (idProduto),
 
     CONSTRAINT fk_venda_kits
     FOREIGN KEY (idKit)
-    REFERENCES loja.kits (idKit),
+    REFERENCES loja.kits (idKit)
 );
