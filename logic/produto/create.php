@@ -13,10 +13,9 @@ function createProduto(){
 
     if(!$query){
         die('[ERRO]: '.mysqli_error($conexao));
-    } else{
-        header('Location: ../index.php');
-        exit();
     }
+    header('Location: ../index.php');
+    exit();
 }
 
 ?>

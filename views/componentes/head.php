@@ -5,8 +5,16 @@
 <link rel="stylesheet" href="views/public/css/style.css">
 <link rel="stylesheet" href="views/public/css/header.css">
 <link rel="stylesheet" href="views/public/css/navbar.css">
-<!-- Links Não do Index -->
+<!-- Links dentro da pasta View -->
 <link rel="stylesheet" href="public/css/header.css">
 <link rel="stylesheet" href="public/css/navbar.css">
 <link rel="stylesheet" href="public/css/style.css">
-<title>KGSports</title>
+<!-- Links dentro da pasta admin -->
+<link rel="stylesheet" href="../public/css/header.css">
+<link rel="stylesheet" href="../public/css/navbar.css">
+<link rel="stylesheet" href="../public/css/style.css">
+<!-- Links dentro de pastas dentro de admin -->
+<link rel="stylesheet" href="../../public/css/header.css">
+<link rel="stylesheet" href="../../public/css/navbar.css">
+<link rel="stylesheet" href="../../public/css/style.css">
+<title>CordESports</title>
