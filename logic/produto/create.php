@@ -1,7 +1,7 @@
 <?php
 
 function createProduto(){
-    require '../../database/conexao.php';
+    require 'database/conexao.php';
 
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
@@ -14,8 +14,9 @@ function createProduto(){
     if(!$query){
         die('[ERRO]: '.mysqli_error($conexao));
     }
-    header('Location: ../index.php');
-    exit();
 }
+
+header('Location: ../../index.php');
+exit();
 
 ?>

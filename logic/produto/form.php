@@ -1,7 +1,9 @@
 <?php
 
 function showFormProduto($id = null){
-    require '../../database/conexao.php';
+    $id = $_GET['id'];
+
+    require 'database/conexao.php';
 
     if(isset($id)){
         $select = "SELECT * FROM produto WHERE idProduto = '$id'";
@@ -18,8 +20,9 @@ function showFormProduto($id = null){
     $return = ['id' => $id, 'action' => $action, 'method' => $method, 'row' => $row];
 
     return $return;
-    header('Location: ../../views/admin/produto/formProduto.php');
-    exit();
 }
+
+header('Location: ../../../views/admin/produto/formProduto.php');
+exit();
 
 ?>

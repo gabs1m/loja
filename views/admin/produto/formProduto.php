@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php require "views/componentes/head.php"; ?>
+    <?php require "../../componentes/head.php"; ?>
 </head>
 <body>
     <?php
-        require "database/conexao.php";
-        require "views/componentes/header.php";
-        require "views/componentes/navbar.php";
+        require "../../../database/conexao.php";
+        require "../../componentes/header.php";
+        require "../../componentes/navbar.php";
+        require "../../../logic/produto/form.php";
+
+        $return = showFormProduto();
 
         $id = $return['id'];
         $action = $return['action'];
@@ -22,8 +25,8 @@
         <button>Confirmar</button>
     </form>
     <?php
-        require "views/componentes/footer.php";
-        require "views/componentes/js-scripts.php";
+        require "../../componentes/footer.php";
+        require "../../componentes/js-scripts.php";
     ?>
 </body>
 </html>
