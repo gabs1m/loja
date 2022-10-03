@@ -1,3 +1,5 @@
+<meta charset="UTF-8">
+
 <?php
 
 $id = $_GET['id'];

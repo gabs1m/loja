@@ -1,3 +1,5 @@
+<meta charset="UTF-8">
+
 <?php
 
 require 'conexao.php';
