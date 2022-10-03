@@ -11,4 +11,6 @@ if(!$query){
     die('[ERRO]: '.mysqli_error($conexao));
 }
 
+$row = mysqli_fetch_assoc($query);
+
 ?>

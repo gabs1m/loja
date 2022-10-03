@@ -8,9 +8,12 @@
     <?php require 'header.php'; ?>
     <?php require 'navbar.php'; ?>
     <?php require 'showProduto.php'; ?>
-    <section>
+    <section class="produto-solo-container">
         <div class="produto-view">
-            <h2></h2>
+            <h2><?=$row['nome']?></h2>
+            <p><?=$row['descricao']?></p>
+            <p>R$<?=$row['valorUnit']?></p>
+            <p>Lote <?=$row['lote']?></p>
         </div>
     </section>
     <?php

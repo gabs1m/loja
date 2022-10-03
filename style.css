@@ -27,8 +27,17 @@ footer{
     padding:20px
 }
 
+a{
+    text-decoration:none;
+}
+li{
+    list-style:none;
+}
+
 #teste{
-    height:864px;
+    width:100%;
+    text-align:center;
+    padding:0 0 50px;
 }
 
 
@@ -42,12 +51,14 @@ footer{
     padding:75px 2.5%;
     text-align:center;
 }
+
 .produtos-container{
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:flex-start;
 }
+
 .produto-geral{
     display:flex;
     flex-direction:column;
@@ -63,6 +74,22 @@ footer{
 .produto-geral:hover{
     background-color:#eee;
 }
+
+.produto-solo-container{
+    width:100%;
+    height:600px;
+    padding:50px;
+}
+
+.produto-view{
+    width:50%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+
 
 @media(max-width:1490px){
     .produtos-container{
