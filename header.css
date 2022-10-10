@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.header-head{
+    padding:15px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-searchbar{
+    width:60%;
+}
+.header-searchbar form{
+    position:relative;
+    margin-left:15%;
+}
+.input-busca, .button-busca{
+    height:40px;
+    padding:10px;
+}
+.input-busca{
+    width:85%;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    font-size:1.1em;
+}
+.button-busca{
+    background-color:#eeee29;
+    position:absolute;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:1.2em;
+}
+.button-busca:hover{
+    background-color:#d8d817;
+}
+
+.header-icons{
+    display:flex;
+    justify-content:space-between;
+    width:25%;
+}
+.icon-header{
+    display:flex;
+    align-items:center;
+    margin:5px 0;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+.icon-header:hover{
+    color:#ccc;
+}
+.icon-header ion-icon{
+    font-size:1.5em;
+    margin:0 5px;
+}
+.icon-header span{
+    font-size:1.2em;
+    display:inline-block;
+}
+
+
+/* -------- Responsividade -------- */
+
+@media(max-width:1100px){
+    .icon-header span{
+        display:none;
+    }
+}
+
+@media(max-width:1000px){
+    .header-searchbar form{
+        margin-left:10%;
+    }
+}
