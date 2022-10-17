@@ -2,7 +2,7 @@
     <div class="header-head">
         <h1>Logo</h1>
         <div class="header-searchbar">
-            <form action="busca.php" method="get">
+            <form action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>" method="get">
                 <input type="search" name="busca" class="input-busca" placeholder="Busque um produto...">
                 <button class="button-busca" title="Buscar">
                     <ion-icon name="search-outline"></ion-icon>
@@ -10,6 +10,10 @@
             </form>
         </div>
         <div class="header-icons">
+            <a href="" class="icon-header" title="Dashboard">
+                <ion-icon name="clipboard-outline"></ion-icon>
+                <span>Dashboard</span>
+            </a>
             <a href="" class="icon-header" title="Lista de Desejos">
                 <ion-icon name="heart-outline"></ion-icon>
                 <span>Wishlist</span>

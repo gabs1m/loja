@@ -2,9 +2,9 @@
 
 <?php
 
-require 'conexao.php';
+require 'database/conexao.php';
 
-$select = "SELECT * FROM produto";
+$select = "SELECT * FROM usuario";
 $query = mysqli_query($conexao, $select);
 
 if(!$query){

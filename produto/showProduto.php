@@ -2,7 +2,7 @@
 
 <?php
 
-require "conexao.php";
+require "../database/conexao.php";
 
 $id = $_GET['id'];
 

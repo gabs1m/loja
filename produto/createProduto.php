@@ -2,7 +2,7 @@
 
 <?php
 
-require 'conexao.php';
+require '../database/conexao.php';
 
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
@@ -16,7 +16,7 @@ if(!$query){
     die('[ERRO]: '.mysqli_error($conexao));
 }
 
-header('Location: index.php');
+header('Location: ../index.php');
 exit();
 
 ?>

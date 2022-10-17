@@ -7,9 +7,9 @@ if($_GET['id'] == null){
     $id = null;
 }
 
-require 'conexao.php';
+require '../database/conexao.php';
 
-$select = "SELECT * FROM produto WHERE idProduto = '$id'";
+$select = "SELECT * FROM usuario WHERE idUsuario = '$id'";
 $query = mysqli_query($conexao, $select);
 if(!$query){
     die('[ERRO]: '.mysqli_error(conexao));
@@ -17,6 +17,6 @@ if(!$query){
 $row = mysqli_fetch_assoc($query);
 
 $method = (isset($id)) ? "get" : "post";
-$action = (isset($id)) ? "updateProduto.php" : "createProduto.php";
+$action = (isset($id)) ? "updateUsuario.php" : "registrar.php";
 
 ?>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php require "head.php"; ?>
+    <?php require "../componentes/head.php"; ?>
 </head>
 <body>
-    <?php require "conexao.php"; ?>
-    <?php require "header.php"; ?>
-    <?php require "navbar.php"; ?>
+    <?php require "../database/conexao.php"; ?>
+    <?php require "../componentes/header.php"; ?>
+    <?php require "../componentes/navbar.php"; ?>
     <?php require "rotaProdutoForm.php"; ?>
 
     <form class="form-produto" action="<?=$action?>" method="<?=$method?>">
@@ -28,12 +28,20 @@
                 <label for="lote">Lote:</label>
                 <input type="text" name="lote" value="<?=(isset($id)) ? $row['lote'] : "" ?>">
             </div>
+            <div class="form-group">
+                <label for="embalagem">Embalagem:</label>
+                <input type="text" name="embalagem" value="<?=(isset($id)) ? $row['lote'] : "" ?>">
+            </div>
+            <div>
+                <label for="imagem" id="label-imagem">Inserir imagem</label>
+                <input type="file" name="imagem" id="imagem">
+            </div>
             <button>Confirmar</button>
         </div>
     </form>
     <?php
-        require "footer.php";
-        require "js-scripts.php";
+        require "../componentes/footer.php";
+        require "../componentes/js-scripts.php";
     ?>
 </body>
 </html>
