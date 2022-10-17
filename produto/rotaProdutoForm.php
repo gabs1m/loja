@@ -7,7 +7,7 @@ if($_GET['id'] == null){
     $id = null;
 }
 
-require 'conexao.php';
+require '../database/conexao.php';
 
 $select = "SELECT * FROM produto WHERE idProduto = '$id'";
 $query = mysqli_query($conexao, $select);

@@ -2,7 +2,7 @@
 
 <?php
 
-require 'conexao.php';
+require 'database/conexao.php';
 
 $select = "SELECT * FROM produto";
 $query = mysqli_query($conexao, $select);

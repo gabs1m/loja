@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php require 'head.php'; ?>
+    <?php require '../componentes/head.php'; ?>
 </head>
 <body>
-    <?php require 'conexao.php'; ?>
-    <?php require 'header.php'; ?>
-    <?php require 'navbar.php'; ?>
+    <?php require '../database/conexao.php'; ?>
+    <?php require '../componentes/header.php'; ?>
+    <?php require '../componentes/navbar.php'; ?>
     <?php require 'showProduto.php'; ?>
     <section class="produto-solo-container">
         <div class="produto-view">
@@ -17,8 +17,8 @@
         </div>
     </section>
     <?php
-        require 'footer.php';
-        require 'js-scripts.php';
+        require '../componentes/footer.php';
+        require '../componentes/js-scripts.php';
     ?>
 
 </body>
