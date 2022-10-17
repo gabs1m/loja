@@ -10,6 +10,10 @@
             </form>
         </div>
         <div class="header-icons">
+            <a href="" class="icon-header" title="Dashboard">
+                <ion-icon name="clipboard-outline"></ion-icon>
+                <span>Dashboard</span>
+            </a>
             <a href="" class="icon-header" title="Lista de Desejos">
                 <ion-icon name="heart-outline"></ion-icon>
                 <span>Wishlist</span>
