@@ -26,7 +26,6 @@
     font-size:1.1em;
 }
 .button-busca{
-    width:10%;
     background-color:#eeee29;
     position:absolute;
     border-top-right-radius:15px;
@@ -42,7 +41,6 @@
 .header-icons{
     display:flex;
     justify-content:space-between;
-    width:25%;
     gap:20px;
 }
 .icon-header{

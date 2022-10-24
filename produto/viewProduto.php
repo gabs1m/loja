@@ -10,10 +10,12 @@
     <?php require 'showProduto.php'; ?>
     <section class="produto-solo-container">
         <div class="produto-view">
+            <img src="<?=$row['imagem']?>" alt="<?=$row['nome']?>">
             <h2><?=$row['nome']?></h2>
             <p><?=$row['descricao']?></p>
             <p>R$<?=$row['valorUnit']?></p>
             <p>Lote <?=$row['lote']?></p>
+            <p>Embalagem: <?=$row['embalagem']?></p>
         </div>
     </section>
     <?php

@@ -8,8 +8,14 @@ $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $valorUnit = $_POST['valorUnit'];
 $lote = $_POST['lote'];
+$embalagem = $_POST['embalagem'];
 
-$insert = "INSERT INTO produto (nome, descricao, valorUnit, lote) VALUES ('$nome', '$descricao', '$valorUnit', '$lote')";
+$imagemNome = $_FILES['imagem']['tmp_name'];
+$destino = '../img/'.$_FILES['imagem']['name'];
+
+move_uploaded_file($imagemNome, $destino);
+
+$insert = "INSERT INTO produto (nome, descricao, valorUnit, lote, embalagem, imagem) VALUES ('$nome', '$descricao', '$valorUnit', '$lote', '$embalagem', '$destino')";
 $query = mysqli_query($conexao, $insert);
 
 if(!$query){

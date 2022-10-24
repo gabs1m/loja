@@ -1,6 +1,8 @@
 <header>
     <div class="header-head">
-        <h1>Logo</h1>
+        <a href="/" title="CordESports">
+            <img src="../img/logo_pequena.png" alt="Logo">
+        </a>
         <div class="header-searchbar">
             <form action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>" method="get">
                 <input type="search" name="busca" class="input-busca" placeholder="Busque um produto...">
@@ -18,7 +20,7 @@
                 <ion-icon name="heart-outline"></ion-icon>
                 <span>Wishlist</span>
             </a>
-            <a href="" class="icon-header" title="Entre ou Cadastre-se">
+            <a href="../usuario/formRegistrar.php?id=<?=null?>" class="icon-header" title="Entre ou Cadastre-se">
                 <ion-icon name="person-outline"></ion-icon>
                 <span>Entrar</span>
             </a>
