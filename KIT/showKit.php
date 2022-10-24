@@ -6,7 +6,7 @@ require "../database/conexao.php";
 
 $id = $_GET['id'];
 
-$select = "SELECT * FROM usuario WHERE idUsuario = '$id'";
+$select = "SELECT * FROM kit WHERE idKit = '$id'";
 $query = mysqli_query($conexao, $select);
 
 if(!$query){

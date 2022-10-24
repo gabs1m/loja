@@ -7,6 +7,7 @@ CREATE TABLE usuario (
     tipoUsuario VARCHAR(10) NOT NULL,
     endereco VARCHAR(100) NOT NULL,
     email VARCHAR(100) NULL DEFAULT NULL,
+    senha VARCHAR(100) NULL DEFAULT NULL,
     telefone INT(11) NULL DEFAULT NULL,
     cpf INT(11) NOT NULL,
     rg INT(9) NULL DEFAULT NULL,
