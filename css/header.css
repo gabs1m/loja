@@ -1,43 +1,17 @@
-*{
-    margin:0;
-    padding:0;
-    outline:0;
-    border:0;
-    box-sizing:border-box;
-}
-body{
-    width:100%;
-    height:100%;
-    font-family:Arial, Helvetica, sans-serif;
-}
+@charset "UTF-8";
 
-
-header, footer{
-    width:100%;
-    padding:10px;
-    background-color:#2b6afc;
-    color:white;
-    position:relative;
-}
-footer{
-    text-align:center;
-    bottom:0;
-    padding:20px
-}
-
-#teste{
-    height:864px;
-}
-
-/* ---- Cabeçalho ---- */
 .header-head{
-    padding:15px;
+    width:100%;
+    padding:20px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
 }
 
+.header-searchbar{
+    width:40%;
+}
 .header-searchbar form{
     position:relative;
 }
@@ -46,7 +20,7 @@ footer{
     padding:10px;
 }
 .input-busca{
-    width:500px;
+    width:90%;
     border-top-left-radius:15px;
     border-bottom-left-radius:15px;
     font-size:1.1em;
@@ -66,12 +40,13 @@ footer{
 
 .header-icons{
     display:flex;
+    justify-content:space-between;
+    gap:20px;
 }
 .icon-header{
-    font-size:1.2em;
     display:flex;
     align-items:center;
-    margin:5px 20px;
+    margin:5px 0;
     text-decoration:none;
     color:white;
     transition:0.3s;
@@ -83,24 +58,16 @@ footer{
     font-size:1.5em;
     margin:0 5px;
 }
+.icon-header span{
+    font-size:1.2em;
+    display:inline-block;
+}
 
 
-.navbar{
-    width:100%;
-    background-color:#1048ca;
-    display:flex;
-    padding:10px 5px;
-    justify-content:space-evenly;
-    position:sticky;
-    top:0;
+/* -------- Responsividade -------- */
+
+@media(max-width:1100px){
+    .icon-header span{
+        display:none;
+    }
 }
-.navbar a{
-    font-size:1.3em;
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-}
-.navbar a:hover{
-    color:#ccc;
-}
-/* ------------------- */
