@@ -30,6 +30,9 @@
     padding:10px;
     transition:0.3s;
 }
+.form-group textarea{
+    font-family:Arial, Helvetica, sans-serif;
+}
 .form-group input:focus, .form-group textarea:focus{
     border-color:grey;
 }

@@ -5,11 +5,9 @@
 </head>
 <body>
     <?php require "../database/conexao.php"; ?>
-    <?php require "../componentes/header.php"; ?>
-    <?php require "../componentes/navbar.php"; ?>
     <?php require "rotaUsuarioForm.php"; ?>
 
-    <form class="form-produto" action="<?=$action?>" method="<?=$method?>">
+    <form class="form-produto" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
         <div class="form-container">
             <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idUsuario'] : "" ?>">
             <div class="form-group">
@@ -18,8 +16,12 @@
             </div>
             <div class="form-group">
                 <label for="tipoUsuario">Tipo do usuário:</label>
-                <input type="radio" name="tipoUsuario" value="admin" <?=(isset($id)) and $row['tipoUsuario'] == "admin" ? "checked" : "" ?>>
-                <input type="radio" name="tipoUsuario" value="cliente" <?=(isset($id)) and $row['tipoUsuario'] == "cliente" ? "checked" : "" ?>>
+                <div class="form-radio">
+                    <input type="radio" name="tipoUsuario" value="admin" <?=(isset($id)) and $row['tipoUsuario'] == "admin" ? "checked" : "" ?>>
+                </div>
+                <div class="form-radio">
+                    <input type="radio" name="tipoUsuario" value="cliente" <?=(isset($id)) and $row['tipoUsuario'] == "cliente" ? "checked" : "" ?>>
+                </div>
             </div>
             <div class="form-group">
                 <label for="endereco">Endereço:</label>
@@ -55,7 +57,6 @@
         </div>
     </form>
     <?php
-        require "../componentes/footer.php";
         require "../componentes/js-scripts.php";
     ?>
 </body>

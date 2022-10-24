@@ -21,6 +21,7 @@ CREATE TABLE produto (
     valorUnit DECIMAL(9,2) NOT NULL,
     lote VARCHAR(15) NOT NULL, 
     embalagem VARCHAR(50) NULL DEFAULT NULL, 
+    imagem VARCHAR(100) NOT NULL, 
     PRIMARY KEY (idProduto)
 );
 
