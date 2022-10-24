@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <?php require "../componentes/head.php"; ?>
+</head>
+<body>
+    <?php require "../database/conexao.php"; ?>
+    <?php require "../componentes/header.php"; ?>
+    <?php require "../componentes/navbar.php"; ?>
+    <?php require "rotaProdutoForm.php"; ?>
+
+    <form class="form-produto" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
+        <div class="form-container">
+            <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idProduto'] : "" ?>">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" value="<?=(isset($id)) ? $row['nome'] : "" ?>">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea name="descricao" cols="30" rows="10"><?=(isset($id)) ? $row['descricao'] : "" ?></textarea>
+            </div>
+            <div class="form-group">
+                <label for="valorUnit">Valor Unitário:</label>
+                <input type="number" name="valorUnit" step=".01" value="<?=(isset($id)) ? $row['valorUnit'] : "" ?>">
+            </div>
+            <div class="form-group">
+                <label for="lote">Lote:</label>
+                <input type="text" name="lote" value="<?=(isset($id)) ? $row['lote'] : "" ?>">
+            </div>
+            <div class="form-group">
+                <label for="embalagem">Embalagem:</label>
+                <input type="text" name="embalagem" value="<?=(isset($id)) ? $row['lote'] : "" ?>">
+            </div>
+            <div>
+                <label for="imagem" id="label-imagem">Inserir imagem</label>
+                <input type="file" name="imagem" id="imagem">
+            </div>
+            <button>Confirmar</button>
+        </div>
+    </form>
+    <?php
+        require "../componentes/footer.php";
+        require "../componentes/js-scripts.php";
+    ?>
+</body>
+</html>
