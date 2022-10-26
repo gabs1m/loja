@@ -11,6 +11,7 @@ CREATE TABLE usuario (
     cpf INT(11) NOT NULL,
     rg INT(9) NULL DEFAULT NULL,
     genero VARCHAR(50) NOT NULL,
+    imagem VARCHAR(100) NULL DEFAULT NULL,
     PRIMARY KEY (idUsuario)
 );
 
@@ -21,7 +22,7 @@ CREATE TABLE produto (
     valorUnit DECIMAL(9,2) NOT NULL,
     lote VARCHAR(15) NOT NULL, 
     embalagem VARCHAR(50) NULL DEFAULT NULL, 
-    imagem VARCHAR(100) NOT NULL, 
+    imagem VARCHAR(100) NULL DEFAULT NULL, 
     PRIMARY KEY (idProduto)
 );
 

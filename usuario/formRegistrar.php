@@ -7,7 +7,7 @@
     <?php require "../database/conexao.php"; ?>
     <?php require "rotaUsuarioForm.php"; ?>
 
-    <form class="form-produto" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
+    <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
         <div class="form-container">
             <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idUsuario'] : "" ?>">
             <div class="form-group">
@@ -18,9 +18,11 @@
                 <label for="tipoUsuario">Tipo do usuário:</label>
                 <div class="form-radio">
                     <input type="radio" name="tipoUsuario" value="admin" <?=(isset($id)) and $row['tipoUsuario'] == "admin" ? "checked" : "" ?>>
+                    <label for="tipoUsuario">Admin</label>
                 </div>
                 <div class="form-radio">
                     <input type="radio" name="tipoUsuario" value="cliente" <?=(isset($id)) and $row['tipoUsuario'] == "cliente" ? "checked" : "" ?>>
+                    <label for="tipoUsuario">Cliente</label>
                 </div>
             </div>
             <div class="form-group">
@@ -41,13 +43,26 @@
             </div>
             <div class="form-group">
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" minlength="11" value="<?=(isset($id)) ? $row['cpf'] : "" ?>">
+                <input type="text" name="cpf" maxlength="11" minlength="11" value="<?=(isset($id)) ? $row['cpf'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="genero">Gênero:</label>
-                <input type="radio" name="genero" value="Feminino" <?=(isset($id)) and $row['genero'] == "Feminino" ? "checked" : "" ?>>
-                <input type="radio" name="genero" value="Masculino" <?=(isset($id)) and $row['genero'] == "Masculino" ? "checked" : "" ?>>
-                <input type="radio" name="genero" value="Prefiro não responder" <?=(isset($id)) and $row['genero'] == "Prefiro não responder" ? "checked" : "" ?>>
+                <div class="form-radio">
+                    <input type="radio" name="genero" value="Feminino" <?=(isset($id)) and $row['genero'] == "Feminino" ? "checked" : "" ?>>
+                    <label for="genero">Feminino</label>
+                </div>
+                <div class="form-radio">
+                    <input type="radio" name="genero" value="Masculino" <?=(isset($id)) and $row['genero'] == "Masculino" ? "checked" : "" ?>>
+                    <label for="genero">Masculino</label>
+                </div>
+                <div class="form-radio">
+                    <input type="radio" name="genero" value="Não-binário" <?=(isset($id)) and $row['genero'] == "Não-binário" ? "checked" : "" ?>>
+                    <label for="genero">Não-binário</label>
+                </div>
+                <div class="form-radio">
+                    <input type="radio" name="genero" value="Prefiro não responder" <?=(isset($id)) and $row['genero'] == "Prefiro não responder" ? "checked" : "" ?>>
+                    <label for="genero">Prefiro não responder</label>
+                </div>
             </div>
             <div>
                 <label for="imagem" id="label-imagem">Inserir foto</label>

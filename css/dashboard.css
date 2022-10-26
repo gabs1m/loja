@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.produto-dash, .usuario-dash{
+    width:100%;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.produto-dash > h2{
+    margin:15px 0 30px;
+}
+.dashboard-table{
+    text-align:center;
+    border-collapse:collapse;
+}
+.dashboard-thead{
+    background-color:#ddd;
+    height:50px;
+    font-weight:bolder;
+}
+.dashboard-td{
+    padding:15px;
+}
+.dashboard-td img{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+}

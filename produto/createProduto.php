@@ -11,7 +11,7 @@ $lote = $_POST['lote'];
 $embalagem = $_POST['embalagem'];
 
 $imagemNome = $_FILES['imagem']['tmp_name'];
-$destino = '../img/'.$_FILES['imagem']['name'];
+$destino = '../img/produto/'.$_FILES['imagem']['name'];
 
 move_uploaded_file($imagemNome, $destino);
 

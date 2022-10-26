@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.form-produto{
+.form-general{
     width:100%;
 }
 
@@ -9,8 +9,18 @@
     flex-direction:column;
     gap:40px;
     width:50%;
-    margin:auto;
-    padding:50px 0;
+    margin:50px auto;
+    padding:50px;
+}
+
+.form-produto{
+    background-color:#ddd;
+    border:2px solid lightgrey;
+    border-radius:10px;
+}
+.form-usuario{
+    background-color:#1d8ede;
+    border-radius:10px;
 }
 
 .form-group{
@@ -51,6 +61,10 @@
 .form-container button:hover{
     background-color:#d8d817;
     color:#fff;
+}
+
+.form-radio label{
+    font-size:1.1em;
 }
 
 input[type="file"]{

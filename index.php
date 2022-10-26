@@ -14,15 +14,13 @@
         require 'produto/readAllProduto.php';
         while($row = mysqli_fetch_assoc($query)){
     ?>
-            <div class="produto-geral">
-                <h2><?=$row['nome']?></h2>
-                <p><?=$row['valorUnit']?></p>
-                <ul>
-                    <li><a href="produto/viewProduto.php?id=<?=$row['idProduto']?>">Exibir</a></li>
-                    <li><a href="produto/formProduto.php?id=<?=$row['idProduto']?>">Editar</a></li>
-                    <li><a href="produto/deleteProduto.php?id=<?=$row['idProduto']?>">Excluir</a></li>
-                </ul>
-            </div>
+            <a href="produto/viewProduto.php?id=<?=$row['idProduto']?>">
+                <div class="produto-geral">
+                    <img src="<?=$row['imagem']?>" alt="<?=$row['nome']?>">
+                    <h2><?=$row['nome']?></h2>
+                    <p><?=$row['valorUnit']?></p>
+                </div>
+            </a>
     <?php
         }
     ?>

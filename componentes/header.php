@@ -12,7 +12,7 @@
             </form>
         </div>
         <div class="header-icons">
-            <a href="" class="icon-header" title="Dashboard">
+            <a href="../dashboard.php" class="icon-header" title="Dashboard">
                 <ion-icon name="clipboard-outline"></ion-icon>
                 <span>Dashboard</span>
             </a>

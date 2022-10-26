@@ -9,8 +9,8 @@
     <?php require "../componentes/navbar.php"; ?>
     <?php require "rotaProdutoForm.php"; ?>
 
-    <form class="form-produto" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
-        <div class="form-container">
+    <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
+        <div class="form-container form-produto">
             <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idProduto'] : "" ?>">
             <div class="form-group">
                 <label for="nome">Nome:</label>
