@@ -37,7 +37,37 @@ li{
 #teste{
     width:100%;
     text-align:center;
-    padding:0 0 50px;
+    padding:50px;
+}
+
+
+.button{
+    padding:10px;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.create-button{
+    background-color:#15d315;
+}
+.create-button:hover{
+    background-color:#179117;
+}
+
+.edit-button{
+    background-color:#2b6afc;
+}
+.edit-button:hover{
+    background-color:#1048ca;
+}
+
+.delete-button{
+    background-color:#d51414;
+}
+.delete-button:hover{
+    background-color:#af1212;
 }
 
 

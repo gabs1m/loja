@@ -49,9 +49,6 @@
     ?>
         </div>
     </section>
-    <section id="teste">
-        <h2><a href="produto/formProduto.php?id=<?= null ?>">Cadastrar novo produto</a></h2>
-    </section>
     <?php
         require 'componentes/footer.php';
         require 'componentes/js-scripts.php';

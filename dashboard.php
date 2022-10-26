@@ -20,6 +20,9 @@
                     <td class="dashboard-td dashboard-td-main">Preço</td>
                     <td class="dashboard-td dashboard-td-main">Embalagem</td>
                     <td class="dashboard-td dashboard-td-main">Lote</td>
+                    <td class="dashboard-td dashboard-td-main"></td>
+                    <td class="dashboard-td dashboard-td-main"></td>
+                    <td class="dashboard-td dashboard-td-main"></td>
                 </tr>
             </thead>
             <tbody class="dashboard-tbody">
@@ -35,12 +38,17 @@
                     <td class="dashboard-td">R$<?=$row['valorUnit']?></td>
                     <td class="dashboard-td"><?=$row['embalagem']?></td>
                     <td class="dashboard-td"><?=$row['lote']?></td>
+                    <td class="dashboard-td"><a href="produto/formProduto.php?id=<?=$row['idProduto']?>" class="button edit-button">Editar</a></td>
+                    <td class="dashboard-td"><a href="produto/deleteProduto.php?id=<?=$row['idProduto']?>" class="button delete-button">Excluir</a></td>
                 </tr>
             <?php
                 }
             ?>
             </tbody>
         </table>
+        <div id="teste">
+            <a href="produto/formProduto.php?id=<?= null ?>" class="button create-button">Cadastrar novo produto</a>
+        </div>
     </section>
     <?php
         require 'componentes/footer.php';
