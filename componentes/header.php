@@ -4,7 +4,7 @@
             <img src="../img/logo_pequena.png" alt="Logo">
         </a>
         <div class="header-searchbar">
-            <form action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>" method="get">
+            <form action="/" method="get">
                 <input type="search" name="busca" class="input-busca" placeholder="Busque um produto...">
                 <button class="button-busca" title="Buscar">
                     <ion-icon name="search-outline"></ion-icon>

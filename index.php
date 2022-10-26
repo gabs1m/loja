@@ -12,7 +12,8 @@
         <div class="produtos-container">
     <?php
         require 'produto/readAllProduto.php';
-        while($row = mysqli_fetch_assoc($query)){
+        if(empty($_GET)){
+            while($row = mysqli_fetch_assoc($query)){
     ?>
             <a href="produto/viewProduto.php?id=<?=$row['idProduto']?>">
                 <div class="produto-geral">
@@ -22,6 +23,28 @@
                 </div>
             </a>
     <?php
+            }
+        } else{
+            $busca = $_GET['busca'];
+
+            $selectW = "SELECT * FROM produto WHERE nome LIKE '%$busca%'";
+            $query = mysqli_query($conexao, $selectW);
+
+            if(!$query){
+                die("[ERRO]: ".mysqli_error($conexao));
+            }
+
+            while($row = mysqli_fetch_assoc($query)){
+    ?>
+            <a href="produto/viewProduto.php?id=<?=$row['idProduto']?>">
+                <div class="produto-geral">
+                    <img src="<?=$row['imagem']?>" alt="<?=$row['nome']?>">
+                    <h2><?=$row['nome']?></h2>
+                    <p><?=$row['valorUnit']?></p>
+                </div>
+            </a>
+    <?php
+            }
         }
     ?>
         </div>
