@@ -43,31 +43,37 @@ li{
 
 .button{
     padding:10px;
-    color:white;
     border-radius:5px;
     cursor:pointer;
     transition:0.3s;
+    background-color:none;
 }
 
 .create-button{
-    background-color:#15d315;
+    color:#15d315;
+    border:1px solid #15d315;
 }
 .create-button:hover{
-    background-color:#179117;
+    background-color:#15d315;
+    color:white;
 }
 
 .edit-button{
-    background-color:#2b6afc;
+    color:#2b6afc;
+    border:1px solid #2b6afc;
 }
 .edit-button:hover{
-    background-color:#1048ca;
+    background-color:#2b6afc;
+    color:white;
 }
 
 .delete-button{
-    background-color:#d51414;
+    color:#d51414;
+    border:1px solid #d51414;
 }
 .delete-button:hover{
-    background-color:#af1212;
+    background-color:#d51414;
+    color:white;
 }
 
 
