@@ -24,10 +24,6 @@
                 <label for="valorUnit">Valor do Kit:</label>
                 <input type="number" name="valorKit" step=".01" value="<?=(isset($id)) ? $row['valorKit'] : "" ?>">
             </div>
-            <div>
-                <label for="imagem" id="label-imagem">Inserir imagem</label>
-                <input type="file" name="imagem" id="imagem">
-            </div>
             <button>Confirmar</button>
         </div>
     </form>
