@@ -11,18 +11,18 @@
 
     <form class="form-Kit" action="<?=$action?>" method="<?=$method?>">
         <div class="form-container">
-            <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idKit'] : "" ?>">
+            <input type="hidden" name="id" value="<?=(isset($id)) ? $kit['idKit'] : "" ?>">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" value="<?=(isset($id)) ? $row['nome'] : "" ?>">
+                <input type="text" name="nome" value="<?=(isset($id)) ? $kit['nome'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <textarea name="descricao" cols="30" rows="10"><?=(isset($id)) ? $row['descricao'] : "" ?></textarea>
+                <textarea name="descricao" cols="30" rows="10"><?=(isset($id)) ? $kit['descricao'] : "" ?></textarea>
             </div>
             <div class="form-group">
                 <label for="valorUnit">Valor do Kit:</label>
-                <input type="number" name="valorKit" step=".01" value="<?=(isset($id)) ? $row['valorKit'] : "" ?>">
+                <input type="number" name="valorKit" step=".01" value="<?=(isset($id)) ? $kit['valorKit'] : "" ?>">
             </div>
             <button>Confirmar</button>
         </div>

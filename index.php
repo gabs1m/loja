@@ -13,13 +13,13 @@
     <?php
         require 'produto/readAllProduto.php';
         if(empty($_GET)){
-            while($row = mysqli_fetch_assoc($query)){
+            while($produto = mysqli_fetch_assoc($query)){
     ?>
-            <a href="produto/viewProduto.php?id=<?=$row['idProduto']?>">
+            <a href="produto/viewProduto.php?id=<?=$produto['idProduto']?>">
                 <div class="produto-geral">
-                    <img src="<?=$row['imagem']?>" alt="<?=$row['nome']?>">
-                    <h2><?=$row['nome']?></h2>
-                    <p><?=$row['valorUnit']?></p>
+                    <img src="<?=$produto['imagem']?>" alt="<?=$produto['nome']?>">
+                    <h2><?=$produto['nome']?></h2>
+                    <p><?=$produto['valorUnit']?></p>
                 </div>
             </a>
     <?php
@@ -34,13 +34,13 @@
                 die("[ERRO]: ".mysqli_error($conexao));
             }
 
-            while($row = mysqli_fetch_assoc($query)){
+            while($produto = mysqli_fetch_assoc($query)){
     ?>
-            <a href="produto/viewProduto.php?id=<?=$row['idProduto']?>">
+            <a href="produto/viewProduto.php?id=<?=$produto['idProduto']?>">
                 <div class="produto-geral">
-                    <img src="<?=$row['imagem']?>" alt="<?=$row['nome']?>">
-                    <h2><?=$row['nome']?></h2>
-                    <p><?=$row['valorUnit']?></p>
+                    <img src="<?=$produto['imagem']?>" alt="<?=$produto['nome']?>">
+                    <h2><?=$produto['nome']?></h2>
+                    <p><?=$produto['valorUnit']?></p>
                 </div>
             </a>
     <?php

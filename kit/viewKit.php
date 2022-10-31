@@ -10,9 +10,9 @@
     <?php require 'showKit.php'; ?>
     <section class="kit-solo-container">
         <div class="kit-view">
-            <h2><?=$row['nome']?></h2>
-            <p><?=$row['descricao']?></p>
-            <p>R$<?=$row['valorKit']?></p>
+            <h2><?=$kit['nome']?></h2>
+            <p><?=$kit['descricao']?></p>
+            <p>R$<?=$kit['valorKit']?></p>
         </div>
     </section>
     <?php

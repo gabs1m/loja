@@ -9,58 +9,58 @@
 
     <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
         <div class="form-container">
-            <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idUsuario'] : "" ?>">
+            <input type="hidden" name="id" value="<?=(isset($id)) ? $usuario['idUsuario'] : "" ?>">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" value="<?=(isset($id)) ? $row['nome'] : "" ?>">
+                <input type="text" name="nome" value="<?=(isset($id)) ? $usuario['nome'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="tipoUsuario">Tipo do usuário:</label>
                 <div class="form-radio">
-                    <input type="radio" name="tipoUsuario" value="admin" <?=(isset($id)) and $row['tipoUsuario'] == "admin" ? "checked" : "" ?>>
+                    <input type="radio" name="tipoUsuario" value="admin" <?=(isset($id)) and $usuario['tipoUsuario'] == "admin" ? "checked" : "" ?>>
                     <label for="tipoUsuario">Admin</label>
                 </div>
                 <div class="form-radio">
-                    <input type="radio" name="tipoUsuario" value="cliente" <?=(isset($id)) and $row['tipoUsuario'] == "cliente" ? "checked" : "" ?>>
+                    <input type="radio" name="tipoUsuario" value="cliente" <?=(isset($id)) and $usuario['tipoUsuario'] == "cliente" ? "checked" : "" ?>>
                     <label for="tipoUsuario">Cliente</label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="endereco">Endereço:</label>
-                <input type="text" name="endereco" value="<?=(isset($id)) ? $row['endereco'] : "" ?>">
+                <input type="text" name="endereco" value="<?=(isset($id)) ? $usuario['endereco'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" name="email" value="<?=(isset($id)) ? $row['email'] : "" ?>">
+                <input type="text" name="email" value="<?=(isset($id)) ? $usuario['email'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
-                <input type="text" name="telefone" maxlength="11" value="<?=(isset($id)) ? $row['telefone'] : "" ?>">
+                <input type="text" name="telefone" maxlength="11" value="<?=(isset($id)) ? $usuario['telefone'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="rg">RG:</label>
-                <input type="text" name="rg" maxlength="9" minlength="8" value="<?=(isset($id)) ? $row['rg'] : "" ?>">
+                <input type="text" name="rg" maxlength="9" minlength="8" value="<?=(isset($id)) ? $usuario['rg'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" maxlength="11" minlength="11" value="<?=(isset($id)) ? $row['cpf'] : "" ?>">
+                <input type="text" name="cpf" maxlength="11" minlength="11" value="<?=(isset($id)) ? $usuario['cpf'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="genero">Gênero:</label>
                 <div class="form-radio">
-                    <input type="radio" name="genero" value="Feminino" <?=(isset($id)) and $row['genero'] == "Feminino" ? "checked" : "" ?>>
+                    <input type="radio" name="genero" value="Feminino" <?=(isset($id)) and $usuario['genero'] == "Feminino" ? "checked" : "" ?>>
                     <label for="genero">Feminino</label>
                 </div>
                 <div class="form-radio">
-                    <input type="radio" name="genero" value="Masculino" <?=(isset($id)) and $row['genero'] == "Masculino" ? "checked" : "" ?>>
+                    <input type="radio" name="genero" value="Masculino" <?=(isset($id)) and $usuario['genero'] == "Masculino" ? "checked" : "" ?>>
                     <label for="genero">Masculino</label>
                 </div>
                 <div class="form-radio">
-                    <input type="radio" name="genero" value="Não-binário" <?=(isset($id)) and $row['genero'] == "Não-binário" ? "checked" : "" ?>>
+                    <input type="radio" name="genero" value="Não-binário" <?=(isset($id)) and $usuario['genero'] == "Não-binário" ? "checked" : "" ?>>
                     <label for="genero">Não-binário</label>
                 </div>
                 <div class="form-radio">
-                    <input type="radio" name="genero" value="Prefiro não responder" <?=(isset($id)) and $row['genero'] == "Prefiro não responder" ? "checked" : "" ?>>
+                    <input type="radio" name="genero" value="Prefiro não responder" <?=(isset($id)) and $usuario['genero'] == "Prefiro não responder" ? "checked" : "" ?>>
                     <label for="genero">Prefiro não responder</label>
                 </div>
             </div>

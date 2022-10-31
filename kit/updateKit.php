@@ -16,7 +16,7 @@ if(!$query){
     die('[ERRO]: '.mysqli_error($conexao));
 }
 
-header('Location: ../index.php');
+header('Location: ../dashboard.php');
 exit();
 
 ?>

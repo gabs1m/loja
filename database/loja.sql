@@ -7,9 +7,9 @@ CREATE TABLE usuario (
     tipoUsuario VARCHAR(10) NOT NULL,
     endereco VARCHAR(100) NOT NULL,
     email VARCHAR(100) NULL DEFAULT NULL,
-    telefone INT(11) NULL DEFAULT NULL,
-    cpf INT(11) NOT NULL,
-    rg INT(9) NULL DEFAULT NULL,
+    telefone VARCHAR(11) NULL DEFAULT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    rg VARCHAR(9) NULL DEFAULT NULL,
     genero VARCHAR(50) NOT NULL,
     imagem VARCHAR(100) NULL DEFAULT NULL,
     PRIMARY KEY (idUsuario)

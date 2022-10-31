@@ -11,26 +11,26 @@
 
     <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
         <div class="form-container form-produto">
-            <input type="hidden" name="id" value="<?=(isset($id)) ? $row['idProduto'] : "" ?>">
+            <input type="hidden" name="id" value="<?=(isset($id)) ? $produto['idProduto'] : "" ?>">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" value="<?=(isset($id)) ? $row['nome'] : "" ?>">
+                <input type="text" name="nome" value="<?=(isset($id)) ? $produto['nome'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <textarea name="descricao" cols="30" rows="10"><?=(isset($id)) ? $row['descricao'] : "" ?></textarea>
+                <textarea name="descricao" cols="30" rows="10"><?=(isset($id)) ? $produto['descricao'] : "" ?></textarea>
             </div>
             <div class="form-group">
                 <label for="valorUnit">Valor Unitário:</label>
-                <input type="number" name="valorUnit" step=".01" value="<?=(isset($id)) ? $row['valorUnit'] : "" ?>">
+                <input type="number" name="valorUnit" step=".01" value="<?=(isset($id)) ? $produto['valorUnit'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="lote">Lote:</label>
-                <input type="text" name="lote" value="<?=(isset($id)) ? $row['lote'] : "" ?>">
+                <input type="text" name="lote" value="<?=(isset($id)) ? $produto['lote'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="embalagem">Embalagem:</label>
-                <input type="text" name="embalagem" value="<?=(isset($id)) ? $row['lote'] : "" ?>">
+                <input type="text" name="embalagem" value="<?=(isset($id)) ? $produto['lote'] : "" ?>">
             </div>
             <div>
                 <label for="imagem" id="label-imagem">Inserir imagem</label>
