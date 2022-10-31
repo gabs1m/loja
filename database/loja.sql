@@ -15,6 +15,12 @@ CREATE TABLE usuario (
     PRIMARY KEY (idUsuario)
 );
 
+CREATE TABLE categoria (
+    idCategoria INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    PRIMARY KEY (idCategoria)
+);
+
 CREATE TABLE produto (
     idProduto INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
@@ -22,7 +28,7 @@ CREATE TABLE produto (
     valorUnit DECIMAL(9,2) NOT NULL,
     lote VARCHAR(15) NOT NULL, 
     embalagem VARCHAR(50) NULL DEFAULT NULL, 
-    imagem VARCHAR(100) NULL DEFAULT NULL, 
+    imagem VARCHAR(100) NULL DEFAULT NULL,
     PRIMARY KEY (idProduto)
 );
 
@@ -58,5 +64,5 @@ CREATE TABLE venda (
 
 
 
-INSERT INTO usuario (nome, tipoUsuario, endereco, email, telefone, cpf, rg, genero) VALUES ('Gab', 'admin', 'XXXX', 'XXXX', 00000000000, 00000000000, 000000000, 'XXXX');
-INSERT INTO usuario (nome, tipoUsuario, endereco, email, telefone, cpf, rg, genero) VALUES ('Kayky', 'admin', 'XXXX', 'XXXX', 00000000000, 00000000000, 000000000, 'XXXX');
+-- INSERT INTO usuario (nome, tipoUsuario, endereco, email, telefone, cpf, rg, genero) VALUES ('Gab', 'admin', 'XXXX', 'XXXX', 00000000000, 00000000000, 000000000, 'XXXX');
+-- INSERT INTO usuario (nome, tipoUsuario, endereco, email, telefone, cpf, rg, genero) VALUES ('Kayky', 'admin', 'XXXX', 'XXXX', 00000000000, 00000000000, 000000000, 'XXXX');

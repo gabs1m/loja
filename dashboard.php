@@ -128,6 +128,37 @@
             </tbody>
         </table>
     </section>
+    <section class="section-dash">
+        <h2>Categorias registradas</h2>
+        <table class="dashboard-table">
+            <thead class="dashboard-thead">
+                <tr class="dashboard-tr dashboard-tr-main">
+                    <td class="dashboard-td dashboard-td-main">ID</td>
+                    <td class="dashboard-td dashboard-td-main">Categoria</td>
+                    <td class="dashboard-td dashboard-td-main"></td>
+                    <td class="dashboard-td dashboard-td-main"></td>
+                </tr>
+            </thead>
+            <tbody class="dashboard-tbody">
+            <?php
+                require 'categoria/readAllCategoria.php';
+                while($categoria = mysqli_fetch_assoc($query)){
+            ?>
+                <tr class="dashboard-tr">
+                    <td class="dashboard-td"><?=$categoria['idCategoria']?></td>
+                    <td class="dashboard-td"><?=$categoria['nome']?></td>
+                    <td class="dashboard-td"><a href="categoria/formCategoria.php?id=<?=$categoria['idCategoria']?>" class="button edit-button">Editar</a></td>
+                    <td class="dashboard-td"><a href="categoria/deleteCategoria.php?id=<?=$categoria['idCategoria']?>" class="button delete-button">Excluir</a></td>
+                </tr>
+            <?php
+                }
+            ?>
+            </tbody>
+        </table>
+        <div id="teste">
+            <a href="categoria/formCategoria.php?id=<?= null ?>" class="button create-button">Cadastrar nova categoria</a>
+        </div>
+    </section>
     <?php
         require 'componentes/footer.php';
         require 'componentes/js-scripts.php';

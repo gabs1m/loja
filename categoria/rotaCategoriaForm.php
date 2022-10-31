@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<?php
+
+$id = $_GET['id'];
+if($_GET['id'] == null){
+    $id = null;
+}
+
+require '../database/conexao.php';
+
+$select = "SELECT * FROM categoria WHERE idCategoria = '$id'";
+$query = mysqli_query($conexao, $select);
+if(!$query){
+    die('[ERRO]: '.mysqli_error(conexao));
+}
+$categoria = mysqli_fetch_assoc($query);
+
+$method = (isset($id)) ? "get" : "post";
+$action = (isset($id)) ? "updateCategoria.php" : "createCategoria.php";
+
+?>
