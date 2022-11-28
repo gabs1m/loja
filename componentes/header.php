@@ -1,4 +1,13 @@
 <header>
+    <?php
+    
+    if(empty($_SESSION)){
+        $rota = 'formRegistrar.php';
+    } else{
+        $rota = 'formLogin.php';
+    }
+    
+    ?>
     <div class="header-head">
         <a href="/" title="CordESports">
             <img src="../img/logo_pequena.png" alt="Logo">
@@ -20,7 +29,7 @@
                 <ion-icon name="heart-outline"></ion-icon>
                 <span>Wishlist</span>
             </a>
-            <a href="../usuario/formRegistrar.php?id=<?=null?>" class="icon-header" title="Entre ou Cadastre-se">
+            <a href="../usuario/<?=$rota?>?id=<?=null?>" class="icon-header" title="Entre ou Cadastre-se">
                 <ion-icon name="person-outline"></ion-icon>
                 <span>Entrar</span>
             </a>

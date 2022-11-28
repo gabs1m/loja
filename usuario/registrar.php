@@ -1,6 +1,6 @@
-<meta charset="UTF-8">
-
 <?php
+
+session_start();
 
 require '../database/conexao.php';
 
@@ -12,18 +12,24 @@ $telefone = $_POST['telefone'];
 $rg = $_POST['rg'];
 $cpf = $_POST['cpf'];
 $genero = $_POST['genero'];
+$senha = $_POST['senha'];
 
 $imagemNome = $_FILES['imagem']['tmp_name'];
 $destino = '../img/usuario/'.$_FILES['imagem']['name'];
 
 move_uploaded_file($imagemNome, $destino);
 
-$insert = "INSERT INTO usuario (nome, tipoUsuario, endereco, email, telefone, rg, cpf, genero, imagem) VALUES ('$nome', '$tipoUsuario', '$endereco', '$email', '$telefone', '$rg', '$cpf', '$genero', '$destino')";
+$insert = "INSERT INTO usuario (nome, tipoUsuario, endereco, email, telefone, rg, cpf, genero, imagem, senha) VALUES ('$nome', '$tipoUsuario', '$endereco', '$email', '$telefone', '$rg', '$cpf', '$genero', '$destino', '$senha')";
 $query = mysqli_query($conexao, $insert);
 
 if(!$query){
     die('[ERRO]: '.mysqli_error($conexao));
 }
+
+$_SESSION['nome'] = $nome;
+$_SESSION['tipoUsuario'] = $tipoUsuario;
+$_SESSION['endereco'] = $endereco;
+$_SESSION['email'] = $email;
 
 header('Location: ../dashboard.php');
 exit();

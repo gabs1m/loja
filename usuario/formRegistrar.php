@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,14 +7,10 @@
 <body>
     <?php require "../database/conexao.php"; ?>
     <?php require "rotaUsuarioForm.php"; ?>
-
+    <?php require "../componentes/header.php"; ?>
     <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
         <div class="form-container">
             <input type="hidden" name="id" value="<?=(isset($id)) ? $usuario['idUsuario'] : "" ?>">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" value="<?=(isset($id)) ? $usuario['nome'] : "" ?>">
-            </div>
             <div class="form-group">
                 <label for="tipoUsuario">Tipo do usuário:</label>
                 <div class="form-radio">
@@ -26,16 +23,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco">Endereço:</label>
-                <input type="text" name="endereco" value="<?=(isset($id)) ? $usuario['endereco'] : "" ?>">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" value="<?=(isset($id)) ? $usuario['nome'] : "" ?>">
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" name="email" value="<?=(isset($id)) ? $usuario['email'] : "" ?>">
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="text" name="telefone" maxlength="11" value="<?=(isset($id)) ? $usuario['telefone'] : "" ?>">
+            <div>
+                <label for="imagem" id="label-imagem">Inserir foto</label>
+                <input type="file" name="imagem" id="imagem">
             </div>
             <div class="form-group">
                 <label for="rg">RG:</label>
@@ -44,6 +37,10 @@
             <div class="form-group">
                 <label for="cpf">CPF:</label>
                 <input type="text" name="cpf" maxlength="11" minlength="11" value="<?=(isset($id)) ? $usuario['cpf'] : "" ?>">
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" value="<?=(isset($id)) ? $usuario['endereco'] : "" ?>">
             </div>
             <div class="form-group">
                 <label for="genero">Gênero:</label>
@@ -64,15 +61,22 @@
                     <label for="genero">Prefiro não responder</label>
                 </div>
             </div>
-            <div>
-                <label for="imagem" id="label-imagem">Inserir foto</label>
-                <input type="file" name="imagem" id="imagem">
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" maxlength="11" value="<?=(isset($id)) ? $usuario['telefone'] : "" ?>">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" value="<?=(isset($id)) ? $usuario['email'] : "" ?>">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" value="<?=(isset($id)) ? $usuario['email'] : "" ?>">
             </div>
             <button>Confirmar</button>
         </div>
     </form>
-    <?php
-        require "../componentes/js-scripts.php";
-    ?>
+    <?php require "../componentes/footer.php"; ?>
+    <?php require "../componentes/js-scripts.php"; ?>
 </body>
 </html>

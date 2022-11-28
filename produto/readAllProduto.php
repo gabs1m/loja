@@ -1,6 +1,6 @@
-<meta charset="UTF-8">
-
 <?php
+
+session_start();
 
 require 'database/conexao.php';
 
