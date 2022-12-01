@@ -26,12 +26,10 @@ if(!$query){
     die('[ERRO]: '.mysqli_error($conexao));
 }
 
-$_SESSION['nome'] = $nome;
+$_SESSION['nomeUsuario'] = $nome;
 $_SESSION['tipoUsuario'] = $tipoUsuario;
-$_SESSION['endereco'] = $endereco;
-$_SESSION['email'] = $email;
 
-header('Location: ../dashboard.php');
+header('Location: ../index.php');
 exit();
 
 ?>

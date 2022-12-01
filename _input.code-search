@@ -1,0 +1,126 @@
+# Query: <input
+# ContextLines: 1
+
+30 resultados - 6 arquivos
+
+categoria\formCategoria.php:
+  14          <div class="form-container form-produto">
+  15:             <input type="hidden" name="id" value="<?=(isset($id)) ? $categoria['idCategoria'] : "" ?>">
+  16              <div class="form-group">
+  17                  <label for="nome">Nome:</label>
+  18:                 <input type="text" name="nome" value="<?=(isset($id)) ? $categoria['nome'] : "" ?>" autocomplete="off">
+  19              </div>
+
+componentes\header.php:
+  16              <form action="/" method="get">
+  17:                 <input type="search" name="busca" class="input-busca" placeholder="Busque um produto..." autocomplete="off">
+  18                  <button class="button-busca" title="Buscar">
+
+kit\formKit.php:
+  14          <div class="form-container">
+  15:             <input type="hidden" name="id" value="<?=(isset($id)) ? $kit['idKit'] : "" ?>">
+  16              <div class="form-group">
+  17                  <label for="nome">Nome:</label>
+  18:                 <input type="text" name="nome" value="<?=(isset($id)) ? $kit['nome'] : "" ?>" autocomplete="off">
+  19              </div>
+
+  25                  <label for="valorUnit">Valor do Kit:</label>
+  26:                 <input type="number" name="valorKit" step=".01" value="<?=(isset($id)) ? $kit['valorKit'] : "" ?>">
+  27              </div>
+
+produto\formProduto.php:
+  14          <div class="form-container form-produto">
+  15:             <input type="hidden" name="id" value="<?=(isset($id)) ? $produto['idProduto'] : "" ?>">
+  16              <div class="form-group">
+  17                  <label for="nome">Nome:</label>
+  18:                 <input type="text" name="nome" value="<?=(isset($id)) ? $produto['nome'] : "" ?>" autocomplete="off">
+  19              </div>
+
+  25                  <label for="valorUnit">Valor Unitário:</label>
+  26:                 <input type="number" name="valorUnit" step=".01" value="<?=(isset($id)) ? $produto['valorUnit'] : "" ?>">
+  27              </div>
+
+  29                  <label for="lote">Lote:</label>
+  30:                 <input type="text" name="lote" value="<?=(isset($id)) ? $produto['lote'] : "" ?>" autocomplete="off">
+  31              </div>
+
+  33                  <label for="embalagem">Embalagem:</label>
+  34:                 <input type="text" name="embalagem" value="<?=(isset($id)) ? $produto['lote'] : "" ?>" autocomplete="off">
+  35              </div>
+
+  37                  <label for="imagem" id="label-imagem">Inserir imagem</label>
+  38:                 <input type="file" name="imagem" id="imagem">
+  39              </div>
+
+usuario\formLogin.php:
+  15          <div class="form-container">
+  16:             <input type="hidden" name="id">
+  17              <div class="form-group">
+  18                  <label for="email">Email:</label>
+  19:                 <input type="email" name="email" autocomplete="off">
+  20              </div>
+
+  22                  <label for="senha">Senha:</label>
+  23:                 <input type="password" name="senha">
+  24              </div>
+
+usuario\formRegistrar.php:
+  12          <div class="form-container">
+  13:             <input type="hidden" name="id" value="<?=(isset($id)) ? $usuario['idUsuario'] : "" ?>">
+  14              <div class="form-group">
+
+  16                  <div class="form-radio">
+  17:                     <input type="radio" name="tipoUsuario" value="admin" <?=(isset($id)) and $usuario['tipoUsuario'] == "admin" ? "checked" : "" ?>>
+  18                      <label for="tipoUsuario">Admin</label>
+
+  20                  <div class="form-radio">
+  21:                     <input type="radio" name="tipoUsuario" value="cliente" <?=(isset($id)) and $usuario['tipoUsuario'] == "cliente" ? "checked" : "" ?>>
+  22                      <label for="tipoUsuario">Cliente</label>
+
+  26                  <label for="nome">Nome:</label>
+  27:                 <input type="text" name="nome" value="<?=(isset($id)) ? $usuario['nome'] : "" ?>" autocomplete="off">
+  28              </div>
+
+  30                  <label for="imagem" id="label-imagem">Inserir foto</label>
+  31:                 <input type="file" name="imagem" id="imagem">
+  32              </div>
+
+  34                  <label for="rg">RG:</label>
+  35:                 <input type="text" name="rg" maxlength="9" minlength="8" value="<?=(isset($id)) ? $usuario['rg'] : "" ?>" autocomplete="off">
+  36              </div>
+
+  38                  <label for="cpf">CPF:</label>
+  39:                 <input type="text" name="cpf" maxlength="11" minlength="11" value="<?=(isset($id)) ? $usuario['cpf'] : "" ?>" autocomplete="off">
+  40              </div>
+
+  42                  <label for="endereco">Endereço:</label>
+  43:                 <input type="text" name="endereco" value="<?=(isset($id)) ? $usuario['endereco'] : "" ?>" autocomplete="off">
+  44              </div>
+
+  47                  <div class="form-radio">
+  48:                     <input type="radio" name="genero" value="Feminino" <?=(isset($id)) and $usuario['genero'] == "Feminino" ? "checked" : "" ?> autocomplete="off">
+  49                      <label for="genero">Feminino</label>
+
+  51                  <div class="form-radio">
+  52:                     <input type="radio" name="genero" value="Masculino" <?=(isset($id)) and $usuario['genero'] == "Masculino" ? "checked" : "" ?>>
+  53                      <label for="genero">Masculino</label>
+
+  55                  <div class="form-radio">
+  56:                     <input type="radio" name="genero" value="Não-binário" <?=(isset($id)) and $usuario['genero'] == "Não-binário" ? "checked" : "" ?>>
+  57                      <label for="genero">Não-binário</label>
+
+  59                  <div class="form-radio">
+  60:                     <input type="radio" name="genero" value="Prefiro não responder" <?=(isset($id)) and $usuario['genero'] == "Prefiro não responder" ? "checked" : "" ?>>
+  61                      <label for="genero">Prefiro não responder</label>
+
+  65                  <label for="telefone">Telefone:</label>
+  66:                 <input type="text" name="telefone" maxlength="11" value="<?=(isset($id)) ? $usuario['telefone'] : "" ?>" autocomplete="off">
+  67              </div>
+
+  69                  <label for="email">Email:</label>
+  70:                 <input type="email" name="email" value="<?=(isset($id)) ? $usuario['email'] : "" ?>" autocomplete="off">
+  71              </div>
+
+  73                  <label for="senha">Senha:</label>
+  74:                 <input type="password" name="senha" value="<?=(isset($id)) ? $usuario['email'] : "" ?>">
+  75              </div>

@@ -1,5 +1,3 @@
-<meta charset="UTF-8">
-
 <?php
 
 require 'database/conexao.php';

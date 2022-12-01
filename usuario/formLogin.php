@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); 
+    if(!empty($_SESSION)){
+        header('Location: ../index.php');
+    } else{
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,9 +23,11 @@
                 <input type="password" name="senha">
             </div>
             <button>Confirmar</button>
+            <span>Não tem uma conta? <a href="formRegistrar.php?id=<?=null?>">Clique aqui</a></span>
         </div>
     </form>
     <?php require "../componentes/footer.php"; ?>
     <?php require "../componentes/js-scripts.php"; ?>
 </body>
 </html>
+<?php } ?>

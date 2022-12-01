@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $id = $_GET['id'];
 if($_GET['id'] == null){
     $id = null;
