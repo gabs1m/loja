@@ -11,6 +11,7 @@
 <body>
     <?php require "../database/conexao.php"; ?>
     <?php require "../componentes/header.php"; ?>
+    <?php require "../componentes/navbar2.php"; ?>
     <form class="form-general" action="login.php" method="post" enctype="multipart/form-data">
         <div class="form-container">
             <input type="hidden" name="id">

@@ -8,6 +8,7 @@
     <?php require "../database/conexao.php"; ?>
     <?php require "rotaUsuarioForm.php"; ?>
     <?php require "../componentes/header.php"; ?>
+    <?php require "../componentes/navbar2.php"; ?>
     <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
         <div class="form-container">
             <input type="hidden" name="id" value="<?=(isset($id)) ? $usuario['idUsuario'] : "" ?>">

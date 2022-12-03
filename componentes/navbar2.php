@@ -1,6 +1,6 @@
 <nav class="navbar">
     <?php
-        include 'database/conexao.php';
+        include '../database/conexao.php';
 
         $select = "SELECT * FROM categoria";
         $query = mysqli_query($conexao, $select);

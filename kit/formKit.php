@@ -7,7 +7,7 @@
 <body>
     <?php require "../database/conexao.php"; ?>
     <?php require "../componentes/header.php"; ?>
-    <?php require "../componentes/navbar.php"; ?>
+    <?php require "../componentes/navbar2.php"; ?>
     <?php require "rotaKitForm.php"; ?>
 
     <form class="form-Kit" action="<?=$action?>" method="<?=$method?>">

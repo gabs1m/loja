@@ -13,16 +13,6 @@
     padding:50px;
 }
 
-.form-produto{
-    background-color:#ddd;
-    border:2px solid lightgrey;
-    border-radius:10px;
-}
-.form-usuario{
-    background-color:#1d8ede;
-    border-radius:10px;
-}
-
 .form-group{
     display:flex;
     flex-direction:column;
@@ -33,7 +23,7 @@
     margin-bottom:10px;
 }
 
-.form-group input, .form-group textarea{
+.form-group input, .form-group textarea, .form-group select{
     font-size:1.05em;
     border:solid 1px #ccc;
     border-radius:5px;

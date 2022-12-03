@@ -7,11 +7,11 @@
 <body>
     <?php require "../database/conexao.php"; ?>
     <?php require "../componentes/header.php"; ?>
-    <?php require "../componentes/navbar.php"; ?>
+    <?php require "../componentes/navbar2.php"; ?>
     <?php require "rotaCategoriaForm.php"; ?>
 
     <form class="form-general" action="<?=$action?>" method="<?=$method?>" enctype="multipart/form-data">
-        <div class="form-container form-produto">
+        <div class="form-container" id="categoria-container">
             <input type="hidden" name="id" value="<?=(isset($id)) ? $categoria['idCategoria'] : "" ?>">
             <div class="form-group">
                 <label for="nome">Nome:</label>
